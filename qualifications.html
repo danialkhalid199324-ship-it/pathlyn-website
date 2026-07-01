@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse 129 RPL qualifications across 12 industries — Certificate III to Graduate Diploma. Find your qualification and start a free eligibility check with Pathlyn.">
+  <title>RPL Qualifications Directory – Pathlyn</title>
+  <link rel="canonical" href="https://pathlyn.com.au/qualifications.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RPL Qualifications Directory – Pathlyn">
+  <meta property="og:description" content="Browse 129 nationally recognised qualifications across 12 industries. Find your qualification and check your eligibility for free.">
+  <meta property="og:url" content="https://pathlyn.com.au/qualifications.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RPL Qualifications Directory – Pathlyn">
+  <meta name="twitter:description" content="Browse 129 nationally recognised qualifications across 12 industries. Free eligibility check available.">`
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230D9488'/%3E%3Ctext x='16' y='24' text-anchor='middle' fill='white' font-size='20' font-weight='900' font-family='Inter,sans-serif'%3EP%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-900: #06111F;
+      --navy-800: #0A1A2E;
+      --navy-700: #0D2244;
+      --teal-700: #0F766E;
+      --teal-600: #0D9488;
+      --teal-500: #14B8A6;
+      --teal-400: #2DD4BF;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-900: #0F172A;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius: 12px;
+      --radius-lg: 18px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow: 0 4px 16px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.09), 0 4px 12px rgba(0,0,0,0.05);
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--gray-900); background: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* ── NAV ── */
+    .nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--gray-200);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 12px rgba(0,0,0,0.05);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 2rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.625rem; flex-shrink: 0; }
+    .logo-mark {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--teal-600), var(--teal-500));
+      border-radius: 9px; display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 900; font-size: 1.0625rem; letter-spacing: -0.04em;
+    }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-name { font-size: 0.9375rem; font-weight: 800; color: var(--navy-800); letter-spacing: -0.02em; }
+    .logo-tagline { font-size: 0.6rem; font-weight: 600; color: var(--gray-400); letter-spacing: 0.1em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 0.125rem; }
+    .nav-links a:not(.btn-nav) {
+      padding: 0.5rem 0.875rem; font-size: 0.875rem; font-weight: 500;
+      color: var(--gray-600); border-radius: 8px; transition: all 0.18s;
+    }
+    .nav-links a:not(.btn-nav):hover { color: var(--navy-800); background: var(--gray-100); }
+    .nav-links a.active { color: var(--teal-600); background: rgba(13,148,136,0.07); font-weight: 600; }
+    .btn-nav {
+      margin-left: 0.625rem; padding: 0.5625rem 1.25rem;
+      background: var(--teal-600); color: var(--white);
+      border-radius: var(--radius); font-size: 0.875rem; font-weight: 600; transition: all 0.2s;
+    }
+    .btn-nav:hover { background: var(--teal-700); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(13,148,136,0.3); }
+    .hamburger { display: none; padding: 0.5rem; color: var(--gray-700); border-radius: 8px; }
+    .mob-menu {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: var(--white); flex-direction: column; gap: 0.25rem;
+      padding: 5rem 1.5rem 2rem; overflow-y: auto;
+    }
+    .mob-menu.open { display: flex; }
+    .mob-close { position: absolute; top: 1.125rem; right: 1.25rem; padding: 0.5rem; color: var(--gray-600); }
+    .mob-menu a { display: block; padding: 0.875rem 1rem; font-size: 1rem; font-weight: 500; color: var(--gray-700); border-radius: var(--radius); transition: all 0.15s; }
+    .mob-menu a:hover { background: var(--gray-100); }
+    .mob-menu .cta-mob { margin-top: 0.75rem; background: var(--teal-600); color: white; border-radius: var(--radius); padding: 1rem; font-size: 1rem; font-weight: 600; text-align: center; display: block; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background:
+        radial-gradient(ellipse 65% 55% at 100% 0%, rgba(13,148,136,0.16) 0%, transparent 60%),
+        linear-gradient(155deg, #05101D 0%, #091828 55%, #081525 100%);
+      padding: 4rem 0 3.5rem; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.035) 1.5px, transparent 1.5px);
+      background-size: 30px 30px; pointer-events: none;
+    }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; color: rgba(255,255,255,0.4); margin-bottom: 1.25rem; }
+    .breadcrumb a { color: var(--teal-400); transition: opacity 0.15s; }
+    .breadcrumb a:hover { opacity: 0.8; }
+    .breadcrumb svg { flex-shrink: 0; }
+    .page-hero h1 {
+      font-size: clamp(1.875rem, 3.5vw, 3rem); font-weight: 900;
+      color: var(--white); letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 0.875rem;
+    }
+    .page-hero h1 em { color: var(--teal-400); font-style: normal; }
+    .page-hero p { font-size: 1.0625rem; color: rgba(255,255,255,0.58); max-width: 560px; line-height: 1.7; }
+    .hero-meta { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.75rem; flex-wrap: wrap; }
+    .hero-stat { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: rgba(255,255,255,0.6); }
+    .hero-stat strong { color: var(--white); font-weight: 700; }
+    .hero-stat svg { color: var(--teal-500); }
+
+    /* ── NOTICE BANNER ── */
+    .notice-banner {
+      background: rgba(13,148,136,0.06); border-bottom: 1px solid rgba(13,148,136,0.15);
+      padding: 0.875rem 0;
+    }
+    .notice-inner { display: flex; align-items: flex-start; gap: 0.75rem; }
+    .notice-icon { color: var(--teal-600); flex-shrink: 0; margin-top: 1px; }
+    .notice-text { font-size: 0.875rem; color: var(--gray-700); line-height: 1.6; }
+    .notice-text strong { color: var(--navy-800); }
+
+    /* ── FILTER BAR ── */
+    .filter-bar {
+      position: sticky; top: 68px; z-index: 90;
+      background: rgba(255,255,255,0.98); border-bottom: 1px solid var(--gray-200);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04); padding: 1rem 0;
+    }
+    .filter-inner { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .search-wrap { position: relative; flex: 1; min-width: 220px; max-width: 340px; }
+    .search-icon { position: absolute; left: 0.875rem; top: 50%; transform: translateY(-50%); color: var(--gray-400); pointer-events: none; }
+    .search-input {
+      width: 100%; padding: 0.6875rem 2.5rem 0.6875rem 2.5rem;
+      border: 1.5px solid var(--gray-200); border-radius: var(--radius);
+      font-size: 0.875rem; color: var(--gray-900); outline: none; font-family: var(--font);
+      transition: border-color 0.18s, box-shadow 0.18s; background: var(--white);
+    }
+    .search-input::placeholder { color: var(--gray-400); }
+    .search-input:focus { border-color: var(--teal-600); box-shadow: 0 0 0 3px rgba(13,148,136,0.1); }
+    .search-clear {
+      position: absolute; right: 0.625rem; top: 50%; transform: translateY(-50%);
+      width: 22px; height: 22px; border-radius: 50%; background: var(--gray-300);
+      color: white; font-size: 0.875rem; display: none; align-items: center; justify-content: center; line-height: 1;
+      cursor: pointer; border: none;
+    }
+    .search-clear.visible { display: flex; }
+    .filter-divider { width: 1px; height: 28px; background: var(--gray-200); flex-shrink: 0; }
+    .level-tabs { display: flex; align-items: center; gap: 0.375rem; overflow-x: auto; flex: 1; padding-bottom: 2px; }
+    .level-tabs::-webkit-scrollbar { height: 0; }
+    .level-tab {
+      padding: 0.4375rem 0.875rem; border-radius: 100px; font-size: 0.8125rem; font-weight: 600;
+      color: var(--gray-600); background: var(--gray-100); border: 1.5px solid transparent;
+      white-space: nowrap; transition: all 0.18s var(--ease); cursor: pointer;
+    }
+    .level-tab:hover { color: var(--navy-800); background: var(--gray-200); }
+    .level-tab.active { background: var(--navy-800); color: var(--white); border-color: var(--navy-800); }
+    .level-tab .cnt { font-weight: 400; opacity: 0.7; font-size: 0.75rem; }
+    .industry-select {
+      padding: 0.6875rem 2rem 0.6875rem 0.875rem; border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius); font-size: 0.875rem; color: var(--gray-700);
+      font-family: var(--font); outline: none; cursor: pointer; background: var(--white);
+      -webkit-appearance: none; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 0.75rem center;
+      transition: border-color 0.18s;
+    }
+    .industry-select:focus { border-color: var(--teal-600); box-shadow: 0 0 0 3px rgba(13,148,136,0.1); }
+
+    /* ── RESULTS BAR ── */
+    .results-bar { padding: 1.5rem 0 0.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .results-count { font-size: 0.875rem; color: var(--gray-500); }
+    .results-count strong { color: var(--gray-900); font-weight: 700; }
+    .results-reset { font-size: 0.8125rem; font-weight: 600; color: var(--teal-600); display: none; cursor: pointer; background: none; border: none; padding: 0; }
+    .results-reset:hover { color: var(--teal-700); }
+    .results-reset.visible { display: inline; }
+
+    /* ── COURSES GRID ── */
+    .courses-section { padding: 0 0 5rem; }
+    .courses-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.125rem; }
+
+    .course-card {
+      background: var(--white); border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius); padding: 1.375rem;
+      display: flex; flex-direction: column; gap: 0.875rem;
+      transition: all 0.2s var(--ease); position: relative;
+      border-left-width: 3.5px;
+    }
+    .course-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); border-color: rgba(13,148,136,0.22); border-left-color: inherit; }
+
+    /* Level left-border accent colors */
+    .course-card.lv-cert1 { border-left-color: #94A3B8; }
+    .course-card.lv-cert2 { border-left-color: #3B82F6; }
+    .course-card.lv-cert3 { border-left-color: #0D9488; }
+    .course-card.lv-cert4 { border-left-color: #0F766E; }
+    .course-card.lv-diploma { border-left-color: #0369A1; }
+    .course-card.lv-advanced { border-left-color: #7C3AED; }
+    .course-card.lv-graduate { border-left-color: #BE185D; }
+
+    .card-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; }
+    .code-badge {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em;
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      background: var(--gray-100); color: var(--gray-700);
+      padding: 0.25rem 0.625rem; border-radius: 6px; white-space: nowrap;
+    }
+    .level-pill {
+      font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.04em;
+      padding: 0.25rem 0.625rem; border-radius: 100px; white-space: nowrap;
+    }
+    .lp-cert1 { background: #F1F5F9; color: #475569; }
+    .lp-cert2 { background: #EFF6FF; color: #1D4ED8; }
+    .lp-cert3 { background: #F0FDFA; color: #0D9488; }
+    .lp-cert4 { background: #CCFBF1; color: #0F766E; }
+    .lp-diploma { background: #E0F2FE; color: #0369A1; }
+    .lp-advanced { background: #EDE9FE; color: #6D28D9; }
+    .lp-graduate { background: #FCE7F3; color: #9D174D; }
+
+    .card-name { font-size: 0.9375rem; font-weight: 700; color: var(--navy-800); line-height: 1.35; flex: 1; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; margin-top: auto; }
+    .industry-pill {
+      font-size: 0.72rem; font-weight: 600; color: var(--gray-500);
+      background: var(--gray-50); border: 1px solid var(--gray-200);
+      padding: 0.25rem 0.5rem; border-radius: 6px; white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis; max-width: 130px;
+    }
+    .card-btn {
+      display: inline-flex; align-items: center; gap: 0.375rem;
+      background: var(--teal-600); color: white; border-radius: 8px;
+      font-size: 0.8rem; font-weight: 600; padding: 0.4375rem 0.875rem;
+      white-space: nowrap; transition: all 0.18s; flex-shrink: 0;
+    }
+    .card-btn:hover { background: var(--teal-700); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(13,148,136,0.3); }
+    .card-btn svg { flex-shrink: 0; }
+
+    /* ── EMPTY STATE ── */
+    .empty-state {
+      display: none; text-align: center;
+      padding: 5rem 1rem; grid-column: 1 / -1;
+    }
+    .empty-icon {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: var(--gray-100); display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.25rem; color: var(--gray-400);
+    }
+    .empty-state h3 { font-size: 1.125rem; font-weight: 700; color: var(--gray-700); margin-bottom: 0.5rem; }
+    .empty-state p { font-size: 0.9rem; color: var(--gray-400); margin-bottom: 1.5rem; }
+    .empty-state button { background: var(--teal-600); color: white; padding: 0.75rem 1.5rem; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600; transition: background 0.18s; }
+    .empty-state button:hover { background: var(--teal-700); }
+
+    /* ── DISCLAIMER ── */
+    .disclaimer-bar { background: var(--gray-50); border-top: 1px solid var(--gray-200); padding: 1.25rem 0; }
+    .disclaimer-inner { display: flex; align-items: flex-start; gap: 0.625rem; }
+    .disclaimer-inner svg { color: var(--gray-400); flex-shrink: 0; margin-top: 1px; }
+    .disclaimer-inner p { font-size: 0.8125rem; color: var(--gray-500); line-height: 1.6; }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      background: linear-gradient(135deg, #0B6E66 0%, var(--teal-600) 55%, #0A7A7A 100%);
+      padding: 4rem 0; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-strip::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.035) 1.5px, transparent 1.5px);
+      background-size: 26px 26px;
+    }
+    .cta-inner { position: relative; z-index: 1; }
+    .cta-strip h2 { font-size: clamp(1.625rem, 3vw, 2.375rem); font-weight: 900; color: white; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 0.75rem; }
+    .cta-strip p { color: rgba(255,255,255,0.76); font-size: 1rem; max-width: 460px; margin: 0 auto 2rem; line-height: 1.65; }
+    .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn-white { background: white; color: var(--navy-800); border: 2px solid white; padding: 0.9rem 1.875rem; border-radius: var(--radius); font-size: 0.9375rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s; }
+    .btn-white:hover { background: var(--gray-50); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+    .btn-ghost-w { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.35); padding: 0.9rem 1.875rem; border-radius: var(--radius); font-size: 0.9375rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: all 0.2s; }
+    .btn-ghost-w:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.65); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy-900); color: rgba(255,255,255,0.55); padding: 4rem 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2.2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.625rem; margin-bottom: 0.875rem; }
+    .footer-logo .logo-name { color: white; }
+    .footer-brand p { font-size: 0.875rem; line-height: 1.65; color: rgba(255,255,255,0.42); margin-top: 0.5rem; }
+    .footer-col-title { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 1rem; }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+    .footer-col ul li a { font-size: 0.875rem; color: rgba(255,255,255,0.5); transition: color 0.18s; }
+    .footer-col ul li a:hover { color: var(--teal-400); }
+    .footer-ci { display: flex; align-items: flex-start; gap: 0.625rem; font-size: 0.875rem; margin-bottom: 0.625rem; }
+    .footer-ci svg { color: var(--teal-500); flex-shrink: 0; margin-top: 2px; }
+    hr.footer-div { border: none; border-top: 1px solid rgba(255,255,255,0.07); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.875rem; padding: 1.5rem 0; }
+    .footer-bottom p { font-size: 0.8125rem; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { font-size: 0.8125rem; color: rgba(255,255,255,0.4); transition: color 0.18s; }
+    .footer-legal a:hover { color: var(--teal-400); }
+    .footer-disc { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.25rem 0; }
+    .footer-disc p { font-size: 0.73rem; color: rgba(255,255,255,0.25); line-height: 1.6; text-align: center; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) { .courses-grid { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; align-items: center; justify-content: center; }
+      .courses-grid { grid-template-columns: 1fr; }
+      .filter-inner { flex-direction: column; align-items: stretch; }
+      .search-wrap { max-width: 100%; }
+      .filter-divider { display: none; }
+      .level-tabs { gap: 0.25rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-mark">P</div>
+        <div class="logo-text">
+          <span class="logo-name">Pathlyn</span>
+          <span class="logo-tagline">AI-Powered RPL</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="qualifications.html" class="active">Qualifications</a>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#evidence">Evidence</a>
+        <a href="index.html#industries">Industries</a>
+        <a href="index.html#faq">FAQ</a>
+        <a href="index.html#contact" class="btn-nav">Free Eligibility Check</a>
+      </nav>
+      <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="mob-close" id="mobClose">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <div class="logo-mark" style="width:40px;height:40px;font-size:1rem;margin-bottom:1rem">P</div>
+  <a href="qualifications.html" onclick="closeMob()">Qualifications</a>
+  <a href="index.html#how-it-works" onclick="closeMob()">How It Works</a>
+  <a href="index.html#evidence" onclick="closeMob()">Evidence</a>
+  <a href="index.html#industries" onclick="closeMob()">Industries</a>
+  <a href="index.html#faq" onclick="closeMob()">FAQ</a>
+  <a href="index.html#contact" class="cta-mob" onclick="closeMob()">Free Eligibility Check</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <span>Qualifications Directory</span>
+      </div>
+      <h1>RPL <em>Qualifications</em> Directory</h1>
+      <p>Browse nationally recognised qualifications supported through our partner RTO network. Search by course name, code, qualification level or industry.</p>
+      <div class="hero-meta">
+        <div class="hero-stat">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span><strong id="totalCount">129</strong> qualifications listed</span>
+        </div>
+        <div class="hero-stat">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span><strong>7</strong> qualification levels</span>
+        </div>
+        <div class="hero-stat">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span><strong>12</strong> industries covered</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICE BANNER -->
+<div class="notice-banner">
+  <div class="container">
+    <div class="notice-inner">
+      <svg class="notice-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <p class="notice-text"><strong>Please note:</strong> Pathlyn supports clients with Recognition of Prior Learning pathways across a wide range of industries. Final availability and assessment outcomes depend on evidence, eligibility and partner RTO assessment. Course availability may vary depending on partner RTO scope and assessment requirements.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar" id="filterBar">
+  <div class="container">
+    <div class="filter-inner">
+      <div class="search-wrap">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search course name or code…" autocomplete="off">
+        <button class="search-clear" id="searchClear" aria-label="Clear search">×</button>
+      </div>
+      <div class="filter-divider"></div>
+      <div class="level-tabs" id="levelTabs">
+        <button class="level-tab active" data-level="all">All <span class="cnt" id="cnt-all"></span></button>
+        <button class="level-tab" data-level="cert1">Cert I <span class="cnt" id="cnt-cert1"></span></button>
+        <button class="level-tab" data-level="cert2">Cert II <span class="cnt" id="cnt-cert2"></span></button>
+        <button class="level-tab" data-level="cert3">Cert III <span class="cnt" id="cnt-cert3"></span></button>
+        <button class="level-tab" data-level="cert4">Cert IV <span class="cnt" id="cnt-cert4"></span></button>
+        <button class="level-tab" data-level="diploma">Diploma <span class="cnt" id="cnt-diploma"></span></button>
+        <button class="level-tab" data-level="advanced">Adv. Diploma <span class="cnt" id="cnt-advanced"></span></button>
+        <button class="level-tab" data-level="graduate">Grad. Diploma <span class="cnt" id="cnt-graduate"></span></button>
+      </div>
+      <select class="industry-select" id="industryFilter">
+        <option value="all">All Industries</option>
+        <option value="security">Security</option>
+        <option value="health">Health &amp; Community Services</option>
+        <option value="hospitality">Hospitality &amp; Commercial Cookery</option>
+        <option value="construction">Construction</option>
+        <option value="business">Business &amp; Leadership</option>
+        <option value="it">Information Technology</option>
+        <option value="automotive">Automotive</option>
+        <option value="retail">Retail</option>
+        <option value="beauty">Beauty &amp; Hairdressing</option>
+        <option value="education">Education &amp; Training</option>
+        <option value="finance">Finance &amp; Accounting</option>
+        <option value="whs">Work Health &amp; Safety</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- COURSES SECTION -->
+<section class="courses-section">
+  <div class="container">
+    <div class="results-bar">
+      <p class="results-count">Showing <strong id="visibleCount">129</strong> of <strong id="totalCountBar">129</strong> qualifications</p>
+      <button class="results-reset" id="resetBtn">Clear all filters</button>
+    </div>
+    <div class="courses-grid" id="coursesGrid">
+      <!-- JS rendered -->
+      <div class="empty-state" id="emptyState">
+        <div class="empty-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>No qualifications found</h3>
+        <p>Try adjusting your search or filters to find what you're looking for.</p>
+        <button onclick="resetAll()">Clear filters</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-bar">
+  <div class="container">
+    <div class="disclaimer-inner">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <p>Pathlyn is not a Registered Training Organisation (RTO) and does not issue qualifications directly. Assessment and qualification issuance is conducted by our partner RTOs. RPL does not guarantee a qualification outcome. Eligibility is subject to evidence and individual assessment. Qualifications listed are nationally recognised under the Australian Qualifications Framework (AQF).</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="container">
+    <div class="cta-inner">
+      <h2>Found a Qualification You're Interested In?</h2>
+      <p>Start with a free eligibility check — one of our RPL advisors will assess your experience and guide you through the next steps.</p>
+      <div class="cta-btns">
+        <a href="index.html#contact" class="btn-white">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Free Eligibility Check
+        </a>
+        <a href="index.html#how-it-works" class="btn-ghost-w">How RPL Works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark">P</div>
+          <div class="logo-text">
+            <span class="logo-name">Pathlyn</span>
+            <span class="logo-tagline">AI-Powered RPL</span>
+          </div>
+        </div>
+        <p>Australia's AI-powered RPL platform helping experienced workers turn their skills into nationally recognised qualifications.</p>
+        <p style="margin-top:0.625rem;font-size:0.8rem;">Pathlyn is not a Registered Training Organisation.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Quick Links</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="qualifications.html">Qualifications</a></li>
+          <li><a href="index.html#how-it-works">How RPL Works</a></li>
+          <li><a href="index.html#evidence">Evidence Guide</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Qualification Levels</div>
+        <ul>
+          <li><a href="qualifications.html?level=cert3">Certificate III</a></li>
+          <li><a href="qualifications.html?level=cert4">Certificate IV</a></li>
+          <li><a href="qualifications.html?level=diploma">Diploma</a></li>
+          <li><a href="qualifications.html?level=advanced">Advanced Diploma</a></li>
+          <li><a href="qualifications.html?level=graduate">Graduate Diploma</a></li>
+          <li><a href="qualifications.html">All Qualifications</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-ci"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>1300 XXX XXX</span></div>
+        <div class="footer-ci"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>info@pathlyn.app</span></div>
+        <div class="footer-ci"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Australia Wide</span></div>
+      </div>
+    </div>
+    <hr class="footer-div">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pathlyn. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+    <div class="footer-disc">
+      <p>Pathlyn is a specialist RPL consultancy and technology platform and is not a Registered Training Organisation (RTO). Pathlyn does not deliver training or issue qualifications. Assessment and qualification issuance are provided by our network of partner RTOs registered under ASQA. Outcomes are subject to individual assessment and are not guaranteed.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════
+//  COURSE DATA
+// ═══════════════════════════════════════════════
+const INDUSTRY_LABELS = {
+  security:    'Security',
+  health:      'Health & Community Services',
+  hospitality: 'Hospitality & Commercial Cookery',
+  construction:'Construction',
+  business:    'Business & Leadership',
+  it:          'Information Technology',
+  automotive:  'Automotive',
+  retail:      'Retail',
+  beauty:      'Beauty & Hairdressing',
+  education:   'Education & Training',
+  finance:     'Finance & Accounting',
+  whs:         'Work Health & Safety',
+};
+
+const LEVEL_LABELS = {
+  cert1:    'Certificate I',
+  cert2:    'Certificate II',
+  cert3:    'Certificate III',
+  cert4:    'Certificate IV',
+  diploma:  'Diploma',
+  advanced: 'Advanced Diploma',
+  graduate: 'Graduate Diploma',
+};
+
+const courses = [
+  // ── CERTIFICATE I ──
+  { code:'CPC10120',  name:'Certificate I in Construction',                                    level:'cert1',    ind:'construction' },
+
+  // ── CERTIFICATE II ──
+  { code:'CPP20218',  name:'Certificate II in Security Operations',                            level:'cert2',    ind:'security' },
+  { code:'SIR20216',  name:'Certificate II in Retail Services',                                level:'cert2',    ind:'retail' },
+
+  // ── CERTIFICATE III ──
+  { code:'CHC30121',  name:'Certificate III in Early Childhood Education and Care',            level:'cert3',    ind:'health' },
+  { code:'CHC30221',  name:'Certificate III in School Based Education Support',                level:'cert3',    ind:'health' },
+  { code:'CHC33021',  name:'Certificate III in Individual Support',                            level:'cert3',    ind:'health' },
+  { code:'BSB30120',  name:'Certificate III in Business',                                      level:'cert3',    ind:'business' },
+  { code:'SIT30821',  name:'Certificate III in Commercial Cookery',                            level:'cert3',    ind:'hospitality' },
+  { code:'SIT30616',  name:'Certificate III in Hospitality',                                   level:'cert3',    ind:'hospitality' },
+  { code:'SIT31021',  name:'Certificate III in Patisserie',                                    level:'cert3',    ind:'hospitality' },
+  { code:'FBP30521',  name:'Certificate III in Baking',                                        level:'cert3',    ind:'hospitality' },
+  { code:'CPC30220',  name:'Certificate III in Carpentry',                                     level:'cert3',    ind:'construction' },
+  { code:'CPC33020',  name:'Certificate III in Bricklaying and Blocklaying',                   level:'cert3',    ind:'construction' },
+  { code:'CPC30320',  name:'Certificate III in Concreting',                                    level:'cert3',    ind:'construction' },
+  { code:'CPC30620',  name:'Certificate III in Painting and Decorating',                       level:'cert3',    ind:'construction' },
+  { code:'CPC31020',  name:'Certificate III in Solid Plastering',                              level:'cert3',    ind:'construction' },
+  { code:'CPC30120',  name:'Certificate III in Shopfitting',                                   level:'cert3',    ind:'construction' },
+  { code:'CPC31220',  name:'Certificate III in Wall and Ceiling Lining',                       level:'cert3',    ind:'construction' },
+  { code:'CPC31320',  name:'Certificate III in Wall and Floor Tiling',                         level:'cert3',    ind:'construction' },
+  { code:'CPC31420',  name:'Certificate III in Construction Waterproofing',                    level:'cert3',    ind:'construction' },
+  { code:'CPC31920',  name:'Certificate III in Joinery',                                       level:'cert3',    ind:'construction' },
+  { code:'CPC32420',  name:'Certificate III in Plumbing',                                      level:'cert3',    ind:'construction' },
+  { code:'CPC32620',  name:'Certificate III in Roof Plumbing',                                 level:'cert3',    ind:'construction' },
+  { code:'CPC30820',  name:'Certificate III in Roof Tiling',                                   level:'cert3',    ind:'construction' },
+  { code:'CPC32320',  name:'Certificate III in Stonemasonry',                                  level:'cert3',    ind:'construction' },
+  { code:'CPC30420',  name:'Certificate III in Demolition',                                    level:'cert3',    ind:'construction' },
+  { code:'AHC30921',  name:'Certificate III in Landscape Construction',                        level:'cert3',    ind:'construction' },
+  { code:'RII30820',  name:'Certificate III in Civil Construction Plant Operations',           level:'cert3',    ind:'construction' },
+  { code:'MSF31113',  name:'Certificate III in Cabinetmaking',                                 level:'cert3',    ind:'construction' },
+  { code:'MEM31922',  name:'Certificate III in Glass and Glazing',                             level:'cert3',    ind:'construction' },
+  { code:'MEM31922',  name:'Certificate III in Engineering – Fabrication Trade',               level:'cert3',    ind:'construction' },
+  { code:'MEM30219',  name:'Certificate III in Engineering – Mechanical Trade',                level:'cert3',    ind:'construction' },
+  { code:'UEE32220',  name:'Certificate III in Air Conditioning and Refrigeration',            level:'cert3',    ind:'construction' },
+  { code:'UEE30820',  name:'Certificate III in Electrotechnology Electrician',                 level:'cert3',    ind:'construction' },
+  { code:'SHB30416',  name:'Certificate III in Hairdressing',                                  level:'cert3',    ind:'beauty' },
+  { code:'SHB30516',  name:'Certificate III in Barbering',                                     level:'cert3',    ind:'beauty' },
+  { code:'SHB30321',  name:'Certificate III in Nail Technology',                               level:'cert3',    ind:'beauty' },
+  { code:'SHB30115',  name:'Certificate III in Beauty Services',                               level:'cert3',    ind:'beauty' },
+  { code:'HLT33115',  name:'Certificate III in Health Services Assistance',                    level:'cert3',    ind:'health' },
+  { code:'SIS30321',  name:'Certificate III in Fitness',                                       level:'cert3',    ind:'health' },
+  { code:'MSM30116',  name:'Certificate III in Process Manufacturing',                         level:'cert3',    ind:'construction' },
+  { code:'AUR30620',  name:'Certificate III in Light Vehicle Mechanical Technology',           level:'cert3',    ind:'automotive' },
+  { code:'AUR32120',  name:'Certificate III in Automotive Body Repair Technology',             level:'cert3',    ind:'automotive' },
+  { code:'AUR31120',  name:'Certificate III in Heavy Commercial Vehicle Mechanical Technology',level:'cert3',    ind:'automotive' },
+  { code:'PAUR30316', name:'Certificate III in Automotive Electrical Technology',              level:'cert3',    ind:'automotive' },
+  { code:'AUR32420',  name:'Certificate III in Automotive Refinishing Technology',             level:'cert3',    ind:'automotive' },
+  { code:'AUR31220',  name:'Certificate III in Mobile Plant Technology',                       level:'cert3',    ind:'automotive' },
+  { code:'AHC30716',  name:'Certificate III in Horticulture',                                  level:'cert3',    ind:'construction' },
+  { code:'AUR31520',  name:'Certificate III in Automotive Diesel Engine Technology',           level:'cert3',    ind:'automotive' },
+  { code:'AMP30815',  name:'Certificate III in Meat Processing (Retail Butcher)',              level:'cert3',    ind:'hospitality' },
+  { code:'TLI30321',  name:'Certificate III in Supply Chain Operations',                       level:'cert3',    ind:'business' },
+  { code:'CPP30316',  name:'Certificate III in Cleaning Operations',                           level:'cert3',    ind:'business' },
+  { code:'CPP31318',  name:'Certificate III in Security Operations',                           level:'cert3',    ind:'security' },
+  { code:'SIR30216',  name:'Certificate III in Retail',                                        level:'cert3',    ind:'retail' },
+
+  // ── CERTIFICATE IV ──
+  { code:'AHC40410',  name:'Certificate IV in Horticulture',                                   level:'cert4',    ind:'construction' },
+  { code:'CHC43015',  name:'Certificate IV in Ageing Support',                                 level:'cert4',    ind:'health' },
+  { code:'CHC40221',  name:'Certificate IV in Child Youth and Family Intervention',            level:'cert4',    ind:'health' },
+  { code:'CHC43315',  name:'Certificate IV in Mental Health',                                  level:'cert4',    ind:'health' },
+  { code:'CHC43121',  name:'Certificate IV in Disability Support',                             level:'cert4',    ind:'health' },
+  { code:'HLT43021',  name:'Certificate IV in Community Services',                             level:'cert4',    ind:'health' },
+  { code:'CHC43415',  name:'Certificate IV in Leisure and Health',                             level:'cert4',    ind:'health' },
+  { code:'SIT40521',  name:'Certificate IV in Kitchen Management',                             level:'cert4',    ind:'hospitality' },
+  { code:'SIT40422',  name:'Certificate IV in Hospitality',                                    level:'cert4',    ind:'hospitality' },
+  { code:'SIT40721',  name:'Certificate IV in Patisserie',                                     level:'cert4',    ind:'hospitality' },
+  { code:'SHB40121',  name:'Certificate IV in Beauty Therapy',                                 level:'cert4',    ind:'beauty' },
+  { code:'BSB40520',  name:'Certificate IV in Leadership and Management',                      level:'cert4',    ind:'business' },
+  { code:'BSB40220',  name:'Certificate IV in Business',                                       level:'cert4',    ind:'business' },
+  { code:'BSB40820',  name:'Certificate IV in Marketing and Communication',                    level:'cert4',    ind:'business' },
+  { code:'CHC40221',  name:'Certificate IV in School Based Education Support',                 level:'cert4',    ind:'health' },
+  { code:'BSB40920',  name:'Certificate IV in Project Management Practice',                    level:'cert4',    ind:'business' },
+  { code:'CPP41419',  name:'Certificate IV in Real Estate Practice',                           level:'cert4',    ind:'business' },
+  { code:'CPC40120',  name:'Certificate IV in Building and Construction',                      level:'cert4',    ind:'construction' },
+  { code:'CPC40920',  name:'Certificate IV in Plumbing and Services',                          level:'cert4',    ind:'construction' },
+  { code:'CPC41020',  name:'Certificate IV in Demolition',                                     level:'cert4',    ind:'construction' },
+  { code:'—',         name:'Certificate IV in Human Resource Management',                      level:'cert4',    ind:'business' },
+  { code:'TAE40122',  name:'Certificate IV in Training and Assessment (New)',                   level:'cert4',    ind:'education' },
+  { code:'TAE40122',  name:'Certificate IV in Training and Assessment (Upgrade)',               level:'cert4',    ind:'education' },
+  { code:'FNS40222',  name:'Certificate IV in Accounting and Bookkeeping',                     level:'cert4',    ind:'finance' },
+  { code:'CPP41519',  name:'Certificate IV in Security Risk Analysis',                         level:'cert4',    ind:'security' },
+  { code:'AUR40216',  name:'Certificate IV in Automotive Mechanical Diagnosis',                level:'cert4',    ind:'automotive' },
+  { code:'AUR40620',  name:'Certificate IV in Automotive Electrical Technology',               level:'cert4',    ind:'automotive' },
+  { code:'AUR40816',  name:'Certificate IV in Automotive Mechanical Overhauling',              level:'cert4',    ind:'automotive' },
+  { code:'AUR40116',  name:'Certificate IV in Automotive Management',                          level:'cert4',    ind:'automotive' },
+  { code:'BSB41419',  name:'Certificate IV in Work Health and Safety',                         level:'cert4',    ind:'whs' },
+  { code:'FNS40821',  name:'Certificate IV in Finance and Mortgage Broking',                   level:'cert4',    ind:'finance' },
+  { code:'SIS40221',  name:'Certificate IV in Fitness',                                        level:'cert4',    ind:'health' },
+  { code:'SHB40216',  name:'Certificate IV in Hairdressing',                                   level:'cert4',    ind:'beauty' },
+  { code:'AUR40720',  name:'Certificate IV in Automotive Body Repair Technology',              level:'cert4',    ind:'automotive' },
+  { code:'ICT40120',  name:'Certificate IV in Information Technology',                         level:'cert4',    ind:'it' },
+
+  // ── DIPLOMA ──
+  { code:'BSB50120',  name:'Diploma of Business',                                              level:'diploma',  ind:'business' },
+  { code:'BSB50420',  name:'Diploma of Leadership and Management',                             level:'diploma',  ind:'business' },
+  { code:'FNS50217',  name:'Diploma of Accounting',                                            level:'diploma',  ind:'finance' },
+  { code:'BSB50320',  name:'Diploma of Human Resources Management',                            level:'diploma',  ind:'business' },
+  { code:'BSB51319',  name:'Diploma of Work Health and Safety',                                level:'diploma',  ind:'whs' },
+  { code:'CHC50121',  name:'Diploma of Early Childhood Education and Care',                    level:'diploma',  ind:'health' },
+  { code:'FNS50320',  name:'Diploma of Finance and Mortgage Broking Management',               level:'diploma',  ind:'finance' },
+  { code:'BSB50620',  name:'Diploma of Marketing and Communication',                           level:'diploma',  ind:'business' },
+  { code:'CHC52021',  name:'Diploma of Community Services',                                    level:'diploma',  ind:'health' },
+  { code:'CHC53315',  name:'Diploma of Mental Health',                                         level:'diploma',  ind:'health' },
+  { code:'CHC50421',  name:'Diploma of Youth Work',                                            level:'diploma',  ind:'health' },
+  { code:'SHB50216',  name:'Diploma of Salon Management',                                     level:'diploma',  ind:'beauty' },
+  { code:'ICT50220',  name:'Diploma of Information Technology',                                level:'diploma',  ind:'it' },
+  { code:'SHB50121',  name:'Diploma of Beauty Therapy',                                        level:'diploma',  ind:'beauty' },
+  { code:'SIT50422',  name:'Diploma of Hospitality Management',                                level:'diploma',  ind:'hospitality' },
+  { code:'HLT52021',  name:'Diploma of Remedial Massage',                                      level:'diploma',  ind:'health' },
+  { code:'BSB50820',  name:'Diploma of Project Management',                                    level:'diploma',  ind:'business' },
+  { code:'AUR50116',  name:'Diploma of Automotive Management',                                 level:'diploma',  ind:'automotive' },
+  { code:'CPC50220',  name:'Diploma of Building and Construction (Building)',                  level:'diploma',  ind:'construction' },
+  { code:'AHC51422',  name:'Diploma of Agribusiness Management',                               level:'diploma',  ind:'business' },
+  { code:'BSB50920',  name:'Diploma of Quality Auditing',                                      level:'diploma',  ind:'business' },
+  { code:'CHC51015',  name:'Diploma of Counselling',                                           level:'diploma',  ind:'health' },
+  { code:'AUR50216',  name:'Diploma of Automotive Technology',                                 level:'diploma',  ind:'automotive' },
+  { code:'SIR50116',  name:'Diploma of Retail Leadership',                                     level:'diploma',  ind:'retail' },
+  { code:'CPP51122',  name:'Diploma of Property (Agency Management)',                          level:'diploma',  ind:'business' },
+
+  // ── ADVANCED DIPLOMA ──
+  { code:'BSB60120',  name:'Advanced Diploma of Business',                                     level:'advanced', ind:'business' },
+  { code:'BSB60420',  name:'Advanced Diploma of Leadership and Management',                    level:'advanced', ind:'business' },
+  { code:'CHC62015',  name:'Advanced Diploma of Community Sector Management',                  level:'advanced', ind:'health' },
+  { code:'RII60520',  name:'Advanced Diploma of Civil Construction and Design',                level:'advanced', ind:'construction' },
+  { code:'FNS60217',  name:'Advanced Diploma of Accounting',                                   level:'advanced', ind:'finance' },
+  { code:'ICT60220',  name:'Advanced Diploma of Information Technology',                       level:'advanced', ind:'it' },
+  { code:'SIT60316',  name:'Advanced Diploma of Hospitality Management',                       level:'advanced', ind:'hospitality' },
+  { code:'BSB60720',  name:'Advanced Diploma of Program Management',                           level:'advanced', ind:'business' },
+  { code:'BSB60619',  name:'Advanced Diploma of Work Health and Safety',                       level:'advanced', ind:'whs' },
+  { code:'BSB60520',  name:'Advanced Diploma of Marketing and Communication',                  level:'advanced', ind:'business' },
+  { code:'CPC60220',  name:'Advanced Diploma of Building and Construction',                    level:'advanced', ind:'construction' },
+
+  // ── GRADUATE DIPLOMA ──
+  { code:'AMP80215',  name:'Graduate Diploma of Agribusiness',                                 level:'graduate', ind:'business' },
+  { code:'BSB80320',  name:'Graduate Diploma of Strategic Leadership',                         level:'graduate', ind:'business' },
+  { code:'BSB80220',  name:'Graduate Diploma of Portfolio Management',                         level:'graduate', ind:'business' },
+  { code:'BSB80120',  name:'Graduate Diploma of Management (Learning)',                        level:'graduate', ind:'business' },
+];
+
+// ═══════════════════════════════════════════════
+//  STATE & RENDER
+// ═══════════════════════════════════════════════
+let activeLevel = 'all';
+let activeInd   = 'all';
+let searchTerm  = '';
+
+function buildCards() {
+  const grid = document.getElementById('coursesGrid');
+  const empty = document.getElementById('emptyState');
+  grid.innerHTML = '';
+  grid.appendChild(empty);
+
+  courses.forEach((c, i) => {
+    const card = document.createElement('div');
+    card.className = `course-card lv-${c.level}`;
+    card.dataset.level  = c.level;
+    card.dataset.ind    = c.ind;
+    card.dataset.search = (c.code + ' ' + c.name).toLowerCase();
+    card.innerHTML = `
+      <div class="card-top">
+        <span class="code-badge">${c.code}</span>
+        <span class="level-pill lp-${c.level}">${LEVEL_LABELS[c.level]}</span>
+      </div>
+      <h3 class="card-name">${c.name}</h3>
+      <div class="card-footer">
+        <span class="industry-pill">${INDUSTRY_LABELS[c.ind]}</span>
+        <a href="index.html?ind=${c.ind}&qual=${encodeURIComponent(c.name)}#contact" class="card-btn">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Check Eligibility
+        </a>
+      </div>`;
+    grid.appendChild(card);
+  });
+
+  updateTabCounts();
+  applyFilters();
+}
+
+function updateTabCounts() {
+  const counts = { all: courses.length, cert1:0, cert2:0, cert3:0, cert4:0, diploma:0, advanced:0, graduate:0 };
+  courses.forEach(c => counts[c.level]++);
+  Object.keys(counts).forEach(k => {
+    const el = document.getElementById('cnt-' + k);
+    if (el) el.textContent = '(' + counts[k] + ')';
+  });
+  document.getElementById('totalCount').textContent    = courses.length;
+  document.getElementById('totalCountBar').textContent = courses.length;
+}
+
+function applyFilters() {
+  const cards = document.querySelectorAll('.course-card');
+  let visible = 0;
+
+  cards.forEach(card => {
+    const lvMatch  = activeLevel === 'all' || card.dataset.level === activeLevel;
+    const indMatch = activeInd   === 'all' || card.dataset.ind   === activeInd;
+    const srMatch  = !searchTerm || card.dataset.search.includes(searchTerm);
+    const show = lvMatch && indMatch && srMatch;
+    card.style.display = show ? '' : 'none';
+    if (show) visible++;
+  });
+
+  document.getElementById('visibleCount').textContent = visible;
+  document.getElementById('emptyState').style.display  = visible === 0 ? 'flex' : 'none';
+  document.getElementById('emptyState').style.flexDirection = 'column';
+  document.getElementById('emptyState').style.alignItems = 'center';
+
+  const isFiltered = activeLevel !== 'all' || activeInd !== 'all' || searchTerm !== '';
+  document.getElementById('resetBtn').classList.toggle('visible', isFiltered);
+}
+
+function resetAll() {
+  activeLevel = 'all';
+  activeInd   = 'all';
+  searchTerm  = '';
+  document.getElementById('searchInput').value = '';
+  document.getElementById('searchClear').classList.remove('visible');
+  document.getElementById('industryFilter').value = 'all';
+  document.querySelectorAll('.level-tab').forEach(t => t.classList.toggle('active', t.dataset.level === 'all'));
+  applyFilters();
+}
+
+// ── EVENTS ──
+document.getElementById('searchInput').addEventListener('input', function() {
+  searchTerm = this.value.trim().toLowerCase();
+  document.getElementById('searchClear').classList.toggle('visible', searchTerm !== '');
+  applyFilters();
+});
+document.getElementById('searchClear').addEventListener('click', () => {
+  document.getElementById('searchInput').value = '';
+  searchTerm = '';
+  document.getElementById('searchClear').classList.remove('visible');
+  document.getElementById('searchInput').focus();
+  applyFilters();
+});
+document.getElementById('levelTabs').addEventListener('click', e => {
+  const tab = e.target.closest('.level-tab');
+  if (!tab) return;
+  activeLevel = tab.dataset.level;
+  document.querySelectorAll('.level-tab').forEach(t => t.classList.toggle('active', t === tab));
+  applyFilters();
+});
+document.getElementById('industryFilter').addEventListener('change', function() {
+  activeInd = this.value;
+  applyFilters();
+});
+document.getElementById('resetBtn').addEventListener('click', resetAll);
+
+// Mobile menu
+const hambBtn = document.getElementById('hambBtn');
+const mobMenu = document.getElementById('mobMenu');
+const mobClose = document.getElementById('mobClose');
+hambBtn.addEventListener('click', () => { mobMenu.classList.add('open'); hambBtn.setAttribute('aria-expanded','true'); document.body.style.overflow = 'hidden'; });
+function closeMob() { mobMenu.classList.remove('open'); hambBtn.setAttribute('aria-expanded','false'); document.body.style.overflow = ''; }
+mobClose.addEventListener('click', closeMob);
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMob(); });
+
+// Init
+buildCards();
+
+// Apply URL params (?industry=security&level=cert3)
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const pInd   = params.get('industry');
+  const pLevel = params.get('level');
+  let changed  = false;
+  if (pInd && INDUSTRY_LABELS[pInd]) {
+    activeInd = pInd;
+    document.getElementById('industryFilter').value = pInd;
+    changed = true;
+  }
+  if (pLevel && LEVEL_LABELS[pLevel]) {
+    activeLevel = pLevel;
+    document.querySelectorAll('.level-tab').forEach(t => {
+      t.classList.toggle('active', t.dataset.level === pLevel);
+    });
+    changed = true;
+  }
+  if (changed) applyFilters();
+})();
+</script>
+</body>
+</html>

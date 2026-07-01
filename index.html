@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pathlyn – Australia's AI-powered Recognition of Prior Learning platform. Turn your work experience into a nationally recognised qualification.">
+  <title>Pathlyn – Australia's AI-Powered RPL Platform</title>
+  <link rel="canonical" href="https://pathlyn.com.au/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pathlyn – Australia's AI-Powered RPL Platform">
+  <meta property="og:description" content="Turn your work experience into a nationally recognised qualification. Free eligibility check — no obligation. Australia wide.">
+  <meta property="og:url" content="https://pathlyn.com.au/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pathlyn – Australia's AI-Powered RPL Platform">
+  <meta name="twitter:description" content="Turn your work experience into a nationally recognised qualification. Free eligibility check — no obligation.">`
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230D9488'/%3E%3Ctext x='16' y='24' text-anchor='middle' fill='white' font-size='20' font-weight='900' font-family='Inter,sans-serif'%3EP%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #040D1A;
+      --navy-900: #06111F;
+      --navy-800: #0A1A2E;
+      --navy-700: #0D2244;
+      --teal-700: #0F766E;
+      --teal-600: #0D9488;
+      --teal-500: #14B8A6;
+      --teal-400: #2DD4BF;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFC;
+      --gray-100: #F1F5F9;
+      --gray-200: #E2E8F0;
+      --gray-300: #CBD5E1;
+      --gray-400: #94A3B8;
+      --gray-500: #64748B;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-900: #0F172A;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow: 0 4px 16px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 20px 40px rgba(0,0,0,0.09), 0 4px 12px rgba(0,0,0,0.05);
+      --shadow-xl: 0 32px 64px rgba(0,0,0,0.14), 0 8px 24px rgba(0,0,0,0.06);
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); color: var(--gray-900); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    input, select, textarea { font-family: inherit; }
+
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    section { padding: 5.5rem 0; }
+
+    /* Typography */
+    .section-label {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: var(--teal-600);
+      margin-bottom: 0.625rem;
+    }
+    .section-title {
+      font-size: clamp(1.875rem, 3vw, 2.625rem);
+      font-weight: 800;
+      line-height: 1.12;
+      color: var(--navy-800);
+      letter-spacing: -0.025em;
+      margin-bottom: 0.875rem;
+    }
+    .section-sub {
+      font-size: 1.0625rem;
+      color: var(--gray-500);
+      line-height: 1.72;
+      max-width: 580px;
+    }
+    .section-hd { margin-bottom: 3.5rem; }
+    .section-hd.center { text-align: center; }
+    .section-hd.center .section-sub { margin: 0 auto; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.875rem;
+      border-radius: var(--radius);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      transition: all 0.22s var(--ease);
+      cursor: pointer;
+      white-space: nowrap;
+      border: 2px solid transparent;
+    }
+    .btn-primary { background: var(--teal-600); color: var(--white); border-color: var(--teal-600); }
+    .btn-primary:hover { background: var(--teal-700); border-color: var(--teal-700); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(13,148,136,0.38); }
+    .btn-ghost { background: transparent; color: var(--white); border-color: rgba(255,255,255,0.35); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.65); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--teal-600); border-color: var(--teal-600); }
+    .btn-outline:hover { background: var(--teal-600); color: var(--white); transform: translateY(-2px); }
+    .btn-white { background: var(--white); color: var(--navy-800); border-color: var(--white); }
+    .btn-white:hover { background: var(--gray-50); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.2); }
+    .btn-lg { padding: 1.0625rem 2.125rem; font-size: 1rem; }
+
+    /* Announcement Bar */
+    .ann-bar {
+      background: var(--teal-600);
+      color: var(--white);
+      text-align: center;
+      padding: 0.625rem 3rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      position: relative;
+    }
+    .ann-bar a { font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+    .ann-bar a:hover { opacity: 0.85; }
+    .ann-close {
+      position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
+      color: white; opacity: 0.7; font-size: 1.25rem; line-height: 1; padding: 0.2rem 0.4rem;
+    }
+    .ann-close:hover { opacity: 1; }
+
+    /* Navigation */
+    .nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid transparent;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .nav.scrolled { border-bottom-color: var(--gray-200); box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 2rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.625rem; flex-shrink: 0; }
+    .logo-mark {
+      width: 38px; height: 38px;
+      background: linear-gradient(135deg, var(--teal-600), var(--teal-500));
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-weight: 900; font-size: 1.0625rem; letter-spacing: -0.04em;
+    }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-name { font-size: 0.9375rem; font-weight: 800; color: var(--navy-800); letter-spacing: -0.02em; }
+    .logo-tagline { font-size: 0.6rem; font-weight: 600; color: var(--gray-400); letter-spacing: 0.1em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 0.125rem; }
+    .nav-links a:not(.btn-nav) {
+      padding: 0.5rem 0.875rem; font-size: 0.875rem; font-weight: 500;
+      color: var(--gray-600); border-radius: 8px; transition: all 0.18s;
+    }
+    .nav-links a:not(.btn-nav):hover { color: var(--navy-800); background: var(--gray-100); }
+    .btn-nav {
+      margin-left: 0.625rem;
+      padding: 0.5625rem 1.25rem;
+      background: var(--teal-600); color: var(--white);
+      border-radius: var(--radius); font-size: 0.875rem; font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn-nav:hover { background: var(--teal-700); box-shadow: 0 4px 16px rgba(13,148,136,0.3); transform: translateY(-1px); }
+    .hamburger { display: none; padding: 0.5rem; color: var(--gray-700); border-radius: 8px; transition: background 0.15s; }
+    .hamburger:hover { background: var(--gray-100); }
+
+    /* Mobile menu */
+    .mob-menu {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: var(--white); flex-direction: column; gap: 0.25rem;
+      padding: 5rem 1.5rem 2rem; overflow-y: auto;
+    }
+    .mob-menu.open { display: flex; }
+    .mob-close { position: absolute; top: 1.125rem; right: 1.25rem; padding: 0.5rem; color: var(--gray-600); }
+    .mob-menu a {
+      display: block; padding: 0.875rem 1rem; font-size: 1rem; font-weight: 500;
+      color: var(--gray-700); border-radius: var(--radius); transition: all 0.15s;
+    }
+    .mob-menu a:hover { background: var(--gray-100); color: var(--navy-800); }
+    .mob-menu .btn-primary { margin-top: 0.75rem; justify-content: center; text-align: center; padding: 1rem; font-size: 1rem; }
+
+    /* ============ HERO ============ */
+    .hero {
+      background:
+        radial-gradient(ellipse 70% 55% at 100% 5%, rgba(13,148,136,0.17) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 45% at 5% 95%, rgba(13,100,180,0.2) 0%, transparent 55%),
+        linear-gradient(155deg, #05101D 0%, #091828 50%, #081525 100%);
+      position: relative; overflow: hidden; padding: 0;
+    }
+    .hero-dots {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,0.04) 1.5px, transparent 1.5px);
+      background-size: 30px 30px;
+    }
+    .hero-glow-1 {
+      position: absolute; top: -15%; right: -8%; width: 650px; height: 650px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(13,148,136,0.13) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-glow-2 {
+      position: absolute; bottom: -25%; left: -5%; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(10,80,160,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-layout {
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 420px; gap: 4rem;
+      align-items: center; padding: 6.5rem 0 5.5rem;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(13,148,136,0.13); border: 1px solid rgba(13,148,136,0.28);
+      color: var(--teal-400); font-size: 0.6875rem; font-weight: 700;
+      letter-spacing: 0.09em; text-transform: uppercase;
+      padding: 0.375rem 0.875rem; border-radius: 100px; margin-bottom: 1.75rem;
+    }
+    .badge-dot { width: 6px; height: 6px; background: var(--teal-500); border-radius: 50%; animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.5)} }
+    .hero h1 {
+      font-size: clamp(2.375rem, 5vw, 4rem); font-weight: 900;
+      line-height: 1.06; letter-spacing: -0.035em;
+      color: var(--white); max-width: 720px; margin-bottom: 1.5rem;
+    }
+    .hero h1 em { color: var(--teal-400); font-style: normal; }
+    .hero-sub {
+      font-size: clamp(1rem, 1.4vw, 1.1875rem); color: rgba(255,255,255,0.6);
+      line-height: 1.72; max-width: 530px; margin-bottom: 2.5rem; font-weight: 400;
+    }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3.5rem; }
+    .trust-row {
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.09);
+    }
+    .trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 500; color: rgba(255,255,255,0.62); }
+    .trust-item svg { color: var(--teal-500); flex-shrink: 0; }
+
+    /* Hero visual panel */
+    .hero-visual { position: relative; }
+    .hero-card {
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(12px); border-radius: var(--radius-lg);
+      padding: 1.75rem; color: white;
+    }
+    .hero-card-top {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+    .hero-card-badge {
+      font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--teal-400); background: rgba(13,148,136,0.15); border: 1px solid rgba(13,148,136,0.25);
+      padding: 0.3rem 0.625rem; border-radius: 100px;
+    }
+    .hero-card-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--teal-600), var(--teal-500));
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hero-card h3 { font-size: 1.375rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.25rem; }
+    .hero-card-sub { font-size: 0.875rem; color: rgba(255,255,255,0.55); margin-bottom: 1.5rem; }
+    .hero-card-checks { display: flex; flex-direction: column; gap: 0.625rem; }
+    .hero-check { display: flex; align-items: center; gap: 0.625rem; font-size: 0.875rem; color: rgba(255,255,255,0.75); }
+    .hero-check-icon {
+      width: 20px; height: 20px; border-radius: 50%; background: rgba(13,148,136,0.25);
+      border: 1px solid rgba(13,148,136,0.4); display: flex; align-items: center; justify-content: center;
+      color: var(--teal-400); flex-shrink: 0;
+    }
+    .hero-float-1 {
+      position: absolute; top: -18px; right: -20px;
+      background: var(--white); border-radius: var(--radius);
+      padding: 0.75rem 1rem; box-shadow: var(--shadow-xl);
+      display: flex; align-items: center; gap: 0.625rem;
+      font-size: 0.8125rem; font-weight: 600; color: var(--navy-800);
+    }
+    .hero-float-1 .dot { width: 8px; height: 8px; border-radius: 50%; background: #22C55E; }
+    .hero-float-2 {
+      position: absolute; bottom: -18px; left: -20px;
+      background: var(--navy-800); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius); padding: 0.75rem 1rem;
+      display: flex; align-items: center; gap: 0.625rem;
+      font-size: 0.8125rem; font-weight: 600; color: white;
+    }
+    .hero-float-2 svg { color: var(--teal-400); }
+
+    /* ============ INDUSTRIES / QUALIFICATIONS ============ */
+    .qual-section { background: var(--white); }
+    .qual-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.125rem; }
+    .qual-card {
+      background: var(--white); border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius); padding: 1.5rem;
+      transition: all 0.22s var(--ease); position: relative; overflow: hidden;
+    }
+    a.qual-card { display: block; }
+    .qual-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--teal-600), var(--teal-400));
+      transform: scaleX(0); transform-origin: left; transition: transform 0.25s var(--ease);
+    }
+    .qual-card:hover { border-color: rgba(13,148,136,0.22); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .qual-card:hover::after { transform: scaleX(1); }
+    .qual-icon {
+      width: 44px; height: 44px; background: rgba(13,148,136,0.08); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--teal-600); margin-bottom: 1rem; transition: background 0.2s;
+    }
+    .qual-card:hover .qual-icon { background: rgba(13,148,136,0.15); }
+    .qual-card h3 { font-size: 0.9375rem; font-weight: 700; color: var(--navy-800); margin-bottom: 0.3rem; line-height: 1.3; }
+    .qual-card p { font-size: 0.8rem; color: var(--gray-500); line-height: 1.5; }
+
+    /* ============ WHY CHOOSE ============ */
+    .why-section { background: var(--gray-50); }
+    .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .why-card {
+      background: var(--white); border-radius: var(--radius-lg); padding: 2rem;
+      box-shadow: var(--shadow-sm); transition: all 0.22s var(--ease);
+    }
+    .why-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .why-icon {
+      width: 54px; height: 54px;
+      background: linear-gradient(135deg, var(--teal-600) 0%, var(--teal-500) 100%);
+      border-radius: 14px; display: flex; align-items: center; justify-content: center;
+      color: white; margin-bottom: 1.25rem;
+      box-shadow: 0 6px 20px rgba(13,148,136,0.28);
+    }
+    .why-card h3 { font-size: 1.0625rem; font-weight: 700; color: var(--navy-800); margin-bottom: 0.5rem; }
+    .why-card p { font-size: 0.9rem; color: var(--gray-500); line-height: 1.65; }
+
+    /* ============ HOW IT WORKS ============ */
+    .hiw-section { background: var(--white); }
+    .hiw-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; position: relative; }
+    .hiw-connector {
+      position: absolute; top: 27px;
+      left: calc(12.5% + 27px); right: calc(12.5% + 27px);
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal-600), var(--teal-400), var(--teal-600), var(--teal-400));
+      z-index: 0;
+    }
+    .hiw-step { text-align: center; position: relative; z-index: 1; }
+    .hiw-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--white); border: 2.5px solid var(--teal-600);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.25rem;
+      font-size: 1.25rem; font-weight: 900; color: var(--teal-600);
+      position: relative;
+    }
+    .hiw-num-inner {
+      position: absolute; top: -10px; right: -10px;
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--teal-600); color: white;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .hiw-step h3 { font-size: 1rem; font-weight: 700; color: var(--navy-800); margin-bottom: 0.5rem; }
+    .hiw-step p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.62; }
+
+    /* ============ EVIDENCE ============ */
+    .evidence-section { background: var(--gray-50); }
+    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 1rem; }
+    .ev-card {
+      background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius);
+      padding: 1.5rem 0.875rem; text-align: center; transition: all 0.2s var(--ease);
+    }
+    .ev-card:hover { border-color: rgba(13,148,136,0.3); box-shadow: var(--shadow); transform: translateY(-3px); }
+    .ev-icon {
+      width: 46px; height: 46px; background: rgba(13,148,136,0.08); border-radius: 11px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--teal-600); margin: 0 auto 0.75rem; transition: background 0.2s;
+    }
+    .ev-card:hover .ev-icon { background: rgba(13,148,136,0.15); }
+    .ev-card span { font-size: 0.8125rem; font-weight: 600; color: var(--gray-700); }
+
+
+    /* ============ TESTIMONIALS ============ */
+    .test-section { background: var(--navy-800); position: relative; overflow: hidden; }
+    .test-section::before {
+      content: ''; position: absolute; top: -40%; right: -15%; width: 500px; height: 500px;
+      border-radius: 50%; background: radial-gradient(circle, rgba(13,148,136,0.1) 0%, transparent 70%);
+    }
+    .test-section .section-title { color: var(--white); }
+    .test-section .section-sub { color: rgba(255,255,255,0.5); }
+    .test-section .section-label { color: var(--teal-400); }
+    .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; position: relative; z-index: 1; }
+    .test-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg); padding: 2rem;
+      transition: all 0.22s var(--ease);
+    }
+    .test-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-4px); }
+    .test-stars { color: #FBBF24; font-size: 0.9375rem; letter-spacing: 0.06em; margin-bottom: 1rem; }
+    .test-quote {
+      font-size: 0.9375rem; color: rgba(255,255,255,0.7); line-height: 1.7;
+      font-style: italic; margin-bottom: 1.5rem;
+    }
+    .test-author { display: flex; align-items: center; gap: 0.75rem; }
+    .test-avatar {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal-600), var(--teal-400));
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: white; font-size: 0.875rem; flex-shrink: 0;
+    }
+    .test-name { font-weight: 700; color: var(--white); font-size: 0.9rem; }
+    .test-role { font-size: 0.79rem; color: rgba(255,255,255,0.4); }
+    .test-placeholder-note {
+      text-align: center; margin-top: 2rem;
+      font-size: 0.8125rem; color: rgba(255,255,255,0.25); font-style: italic;
+    }
+
+    /* ============ FAQ ============ */
+    .faq-section { background: var(--gray-50); }
+    .faq-wrap { max-width: 760px; margin: 0 auto; }
+    .faq-item {
+      background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius);
+      margin-bottom: 0.75rem; overflow: hidden; transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .faq-item.open { border-color: rgba(13,148,136,0.25); box-shadow: var(--shadow); }
+    .faq-q {
+      width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      padding: 1.25rem 1.5rem; text-align: left; font-size: 0.9375rem; font-weight: 600;
+      color: var(--navy-800); background: none; border: none; font-family: inherit; cursor: pointer;
+      transition: color 0.18s;
+    }
+    .faq-q:hover { color: var(--teal-600); }
+    .faq-toggle {
+      width: 28px; height: 28px; border-radius: 50%; background: var(--gray-100);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      color: var(--gray-500); transition: all 0.25s var(--ease);
+    }
+    .faq-item.open .faq-toggle { background: rgba(13,148,136,0.1); color: var(--teal-600); transform: rotate(45deg); }
+    .faq-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-item.open .faq-body { max-height: 400px; }
+    .faq-body-inner {
+      padding: 0 1.5rem 1.25rem; font-size: 0.9rem; color: var(--gray-500); line-height: 1.7;
+      border-top: 1px solid var(--gray-100); padding-top: 1.125rem;
+    }
+
+    /* ============ CONTACT ============ */
+    .contact-section { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 5rem; align-items: start; }
+    .contact-lhs h2 { font-size: clamp(1.75rem, 2.5vw, 2.375rem); font-weight: 800; color: var(--navy-800); line-height: 1.14; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .contact-lhs p { color: var(--gray-500); line-height: 1.72; margin-bottom: 2rem; font-size: 0.9375rem; }
+    .contact-items { display: flex; flex-direction: column; gap: 0.875rem; }
+    .contact-item { display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; color: var(--gray-600); }
+    .contact-item svg { color: var(--teal-600); flex-shrink: 0; }
+    .contact-note {
+      margin-top: 2rem; padding: 1rem 1.25rem;
+      background: rgba(13,148,136,0.05); border-left: 3px solid var(--teal-600);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 0.8125rem; color: var(--gray-600); line-height: 1.65;
+    }
+    .form-card { background: var(--gray-50); border: 1.5px solid var(--gray-200); border-radius: var(--radius-lg); padding: 2.5rem; }
+    .form-title { font-size: 1.125rem; font-weight: 700; color: var(--navy-800); margin-bottom: 0.375rem; }
+    .form-subtitle { font-size: 0.875rem; color: var(--gray-500); margin-bottom: 1.75rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.375rem; margin-bottom: 1rem; }
+    .form-group:last-of-type { margin-bottom: 0; }
+    .form-label { font-size: 0.8rem; font-weight: 600; color: var(--gray-700); }
+    .form-label .req { color: var(--teal-600); }
+    .form-ctrl {
+      width: 100%; padding: 0.75rem 1rem;
+      background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius);
+      font-size: 0.9rem; color: var(--gray-900); outline: none;
+      transition: border-color 0.18s, box-shadow 0.18s;
+    }
+    .form-ctrl::placeholder { color: var(--gray-400); }
+    .form-ctrl:focus { border-color: var(--teal-600); box-shadow: 0 0 0 3px rgba(13,148,136,0.1); }
+    textarea.form-ctrl { resize: vertical; min-height: 90px; }
+    .radio-group { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.375rem; }
+    .radio-opt { display: flex; align-items: flex-start; gap: 0.625rem; font-size: 0.875rem; color: var(--gray-700); cursor: pointer; line-height: 1.5; }
+    .radio-opt input[type="radio"] { margin-top: 3px; accent-color: var(--teal-600); width: 15px; height: 15px; flex-shrink: 0; cursor: pointer; }
+    .form-submit { margin-top: 1.5rem; }
+    .form-submit .btn { width: 100%; justify-content: center; padding: 1rem; font-size: 1rem; }
+    .form-disc { margin-top: 0.875rem; font-size: 0.72rem; color: var(--gray-400); text-align: center; line-height: 1.55; }
+
+    /* ============ FINAL CTA ============ */
+    .cta-section {
+      background: linear-gradient(135deg, #0B6E66 0%, var(--teal-600) 55%, #0A7A7A 100%);
+      padding: 5.5rem 0; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(255,255,255,0.035) 1.5px, transparent 1.5px);
+      background-size: 26px 26px;
+    }
+    .cta-inner { position: relative; z-index: 1; }
+    .cta-section h2 {
+      font-size: clamp(1.875rem, 3.5vw, 2.875rem); font-weight: 900;
+      color: var(--white); letter-spacing: -0.025em; line-height: 1.12; margin-bottom: 1rem;
+    }
+    .cta-section p { color: rgba(255,255,255,0.78); font-size: 1.0625rem; max-width: 500px; margin: 0 auto 2.5rem; line-height: 1.65; }
+    .cta-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+    /* ============ FOOTER ============ */
+    footer { background: var(--navy-900); color: rgba(255,255,255,0.55); padding: 4rem 0 0; }
+    .footer-grid { display: grid; grid-template-columns: 2.2fr 1fr 1fr 1.5fr; gap: 3rem; margin-bottom: 3rem; }
+    .footer-logo { display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1rem; }
+    .footer-brand p { font-size: 0.875rem; line-height: 1.65; color: rgba(255,255,255,0.42); margin-top: 0.75rem; }
+    .footer-col-title { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 1rem; }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+    .footer-col ul li a { font-size: 0.875rem; color: rgba(255,255,255,0.5); transition: color 0.18s; }
+    .footer-col ul li a:hover { color: var(--teal-400); }
+    .footer-contact-col { display: flex; flex-direction: column; gap: 0.625rem; }
+    .footer-ci { display: flex; align-items: flex-start; gap: 0.625rem; font-size: 0.875rem; }
+    .footer-ci svg { color: var(--teal-500); flex-shrink: 0; margin-top: 1px; }
+    .footer-divider { border: none; border-top: 1px solid rgba(255,255,255,0.07); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 0.875rem; padding: 1.5rem 0;
+    }
+    .footer-bottom p { font-size: 0.8125rem; }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { font-size: 0.8125rem; color: rgba(255,255,255,0.4); transition: color 0.18s; }
+    .footer-legal a:hover { color: var(--teal-400); }
+    .footer-disc { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.25rem 0; }
+    .footer-disc p { font-size: 0.73rem; color: rgba(255,255,255,0.25); line-height: 1.6; text-align: center; }
+
+    /* ============ ANIMATIONS ============ */
+    .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade-up.show { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.16s; }
+    .d3 { transition-delay: 0.24s; }
+    .d4 { transition-delay: 0.32s; }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 1024px) {
+      .qual-grid { grid-template-columns: repeat(3, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-layout { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+    }
+    @media (max-width: 768px) {
+      section { padding: 3.75rem 0; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; align-items: center; justify-content: center; }
+      .qual-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: 1fr; }
+      .hiw-steps { grid-template-columns: repeat(2, 1fr); }
+      .hiw-connector { display: none; }
+      .test-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+      .hero-layout { padding: 4.5rem 0 3.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .qual-grid { grid-template-columns: 1fr; }
+      .hiw-steps { grid-template-columns: 1fr; }
+      .evidence-grid { grid-template-columns: repeat(3, 1fr); }
+      .trust-row { gap: 1rem; }
+    }
+
+    /* ── FORM VALIDATION ── */
+    .form-group.has-error .form-ctrl { border-color: #EF4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.1); }
+    .form-group.has-error .radio-group { outline: 1.5px solid #EF4444; border-radius: 8px; padding: 0.5rem 0.625rem; margin-top: 0.25rem; }
+    .form-error { font-size: 0.78rem; color: #EF4444; margin-top: 0.25rem; display: block; line-height: 1.4; }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="ann-bar" id="annBar">
+  Free Eligibility Checks Available Now &mdash; <a href="#contact">Find Out If You Qualify Today</a>
+  <button class="ann-close" onclick="document.getElementById('annBar').remove()" aria-label="Close">×</button>
+</div>
+
+<!-- Navigation -->
+<nav class="nav" id="mainNav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Pathlyn Home">
+        <div class="logo-mark">P</div>
+        <div class="logo-text">
+          <span class="logo-name">Pathlyn</span>
+          <span class="logo-tagline">AI-Powered RPL</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="qualifications.html">Qualifications</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#industries">Industries</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn-nav">Free Eligibility Check</a>
+      </nav>
+      <button class="hamburger" id="hambBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="mob-close" id="mobClose" aria-label="Close menu">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <div class="logo-mark" style="width:40px;height:40px;font-size:1rem;margin-bottom:1rem">P</div>
+  <a href="qualifications.html" onclick="closeMob()">Qualifications</a>
+  <a href="#how-it-works" onclick="closeMob()">How It Works</a>
+  <a href="#evidence" onclick="closeMob()">Evidence</a>
+  <a href="#industries" onclick="closeMob()">Industries</a>
+  <a href="#faq" onclick="closeMob()">FAQ</a>
+  <a href="#contact" class="btn btn-primary btn-lg" onclick="closeMob()">Free Eligibility Check</a>
+</div>
+
+<!-- ============================
+     HERO
+============================= -->
+<section class="hero" id="home">
+  <div class="hero-dots"></div>
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="container">
+    <div class="hero-layout">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Australia's AI-Powered RPL Platform
+        </div>
+        <h1>Turn Your Experience Into a <em>Nationally Recognised</em> Qualification</h1>
+        <p class="hero-sub">Pathlyn is Australia's AI-powered RPL platform — helping experienced workers turn their skills and industry experience into nationally recognised qualifications, faster and simpler than ever before.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            Free Eligibility Check
+          </a>
+          <a href="#contact" class="btn btn-ghost btn-lg">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Speak With An Advisor
+          </a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Australia Wide
+          </div>
+          <div class="trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Partner RTO Network
+          </div>
+          <div class="trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Dedicated RPL Advisors
+          </div>
+          <div class="trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            Evidence-Based Assessment
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div style="position:relative; padding: 1.25rem 0;">
+          <div class="hero-float-1">
+            <span class="dot"></span>
+            Advisors Available Now
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-top">
+              <div class="hero-card-badge">RPL Assessment</div>
+              <div class="hero-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+            </div>
+            <h3>Your Work Experience</h3>
+            <p class="hero-card-sub">Assessed against national competency standards</p>
+            <div class="hero-card-checks">
+              <div class="hero-check">
+                <div class="hero-check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Skills assessed by partner RTO
+              </div>
+              <div class="hero-check">
+                <div class="hero-check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Evidence-based pathway
+              </div>
+              <div class="hero-check">
+                <div class="hero-check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Nationally recognised outcome
+              </div>
+              <div class="hero-check">
+                <div class="hero-check-icon"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                Free eligibility check
+              </div>
+            </div>
+          </div>
+          <div class="hero-float-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Australia Wide Coverage
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     INDUSTRIES
+============================= -->
+<section class="qual-section" id="industries">
+  <div class="container">
+    <div class="section-hd fade-up">
+      <div class="section-label">Industries We Serve</div>
+      <h2 class="section-title">Industries We Work With</h2>
+      <p class="section-sub">Pathlyn supports experienced workers across 12 industries. Choose your industry below to browse available qualifications through our partner RTO network.</p>
+      <a href="qualifications.html" style="display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.25rem;font-size:0.9rem;font-weight:600;color:var(--teal-600);transition:gap 0.18s;">
+        Browse Full Qualifications Directory (129 courses)
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+    <div class="qual-grid">
+      <a href="qualifications.html?industry=security" class="qual-card fade-up">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Security</h3>
+        <p>Security officers, supervisors &amp; risk analysts</p>
+      </a>
+      <a href="qualifications.html?industry=health" class="qual-card fade-up d1">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3>Health &amp; Community Services</h3>
+        <p>Individual support, disability, aged care &amp; community workers</p>
+      </a>
+      <a href="qualifications.html?industry=hospitality" class="qual-card fade-up d2">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <h3>Hospitality &amp; Commercial Cookery</h3>
+        <p>Chefs, cooks, front of house &amp; venue managers</p>
+      </a>
+      <a href="qualifications.html?industry=construction" class="qual-card fade-up d3">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Construction</h3>
+        <p>Tradies, builders, plumbers, electricians &amp; site supervisors</p>
+      </a>
+      <a href="qualifications.html?industry=business" class="qual-card fade-up">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+        <h3>Business &amp; Leadership</h3>
+        <p>Office professionals, team leaders &amp; business managers</p>
+      </a>
+      <a href="qualifications.html?industry=it" class="qual-card fade-up d1">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Information Technology</h3>
+        <p>IT professionals, support staff &amp; developers</p>
+      </a>
+      <a href="qualifications.html?industry=automotive" class="qual-card fade-up d2">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+        <h3>Automotive</h3>
+        <p>Mechanics, technicians &amp; automotive managers</p>
+      </a>
+      <a href="qualifications.html?industry=retail" class="qual-card fade-up d3">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+        <h3>Retail</h3>
+        <p>Retail assistants, supervisors &amp; store managers</p>
+      </a>
+      <a href="qualifications.html?industry=beauty" class="qual-card fade-up">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
+        <h3>Beauty &amp; Hairdressing</h3>
+        <p>Hairdressers, barbers, beauty therapists &amp; salon managers</p>
+      </a>
+      <a href="qualifications.html?industry=education" class="qual-card fade-up d1">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3>Education &amp; Training</h3>
+        <p>Trainers, assessors &amp; vocational educators</p>
+      </a>
+      <a href="qualifications.html?industry=finance" class="qual-card fade-up d2">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+        <h3>Finance &amp; Accounting</h3>
+        <p>Accountants, bookkeepers &amp; mortgage brokers</p>
+      </a>
+      <a href="qualifications.html?industry=whs" class="qual-card fade-up d3">
+        <div class="qual-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <h3>Work Health &amp; Safety</h3>
+        <p>WHS officers, safety managers &amp; compliance professionals</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     WHY CHOOSE
+============================= -->
+<section class="why-section" id="why-us">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <div class="section-label">Why Pathlyn</div>
+      <h2 class="section-title">The Smarter Path to Qualification</h2>
+      <p class="section-sub">RPL recognises what you already know. No unnecessary study. No starting from scratch. Just proper recognition of the skills you have already built — powered by Pathlyn's intelligent platform.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Save Time</h3>
+        <p>Avoid repeating training you have already completed. RPL assesses your existing competency, meaning the process is far shorter than traditional study pathways.</p>
+      </div>
+      <div class="why-card fade-up d1">
+        <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Save Money</h3>
+        <p>RPL is typically more cost-effective than enrolling in a full qualification course. You pay for assessment of your existing skills, not re-learning them.</p>
+      </div>
+      <div class="why-card fade-up d2">
+        <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+        <h3>Recognition of Existing Skills</h3>
+        <p>Your years of industry experience have real value. RPL formally recognises the competencies you have developed and translates them into a national qualification.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Australia-Wide Support</h3>
+        <p>Whether you are in Sydney, Brisbane, Melbourne, Perth or a regional area, our team supports clients right across Australia through our partner RTO network.</p>
+      </div>
+      <div class="why-card fade-up d1">
+        <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3>Industry-Specific Guidance</h3>
+        <p>Our advisors understand the specific requirements of each qualification and industry, ensuring your evidence is collected and presented effectively.</p>
+      </div>
+      <div class="why-card fade-up d2">
+        <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Dedicated RPL Advisors</h3>
+        <p>From your first eligibility check through to evidence submission, a dedicated RPL advisor guides you through the entire process with clear, honest communication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     HOW IT WORKS
+============================= -->
+<section class="hiw-section" id="how-it-works">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <div class="section-label">The Process</div>
+      <h2 class="section-title">How RPL Works</h2>
+      <p class="section-sub">A straightforward four-stage process designed to assess your skills and experience against nationally recognised competency standards.</p>
+    </div>
+    <div class="hiw-steps">
+      <div class="hiw-connector"></div>
+      <div class="hiw-step fade-up">
+        <div class="hiw-num">
+          1
+          <div class="hiw-num-inner"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        </div>
+        <h3>Free Eligibility Check</h3>
+        <p>Speak with an RPL advisor who will assess your background, work history and experience to determine whether RPL is suitable for you — at no cost.</p>
+      </div>
+      <div class="hiw-step fade-up d1">
+        <div class="hiw-num">
+          2
+          <div class="hiw-num-inner"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></div>
+        </div>
+        <h3>Evidence Collection</h3>
+        <p>Your advisor guides you through the evidence collection process, helping you identify and compile the right documentation to support your RPL application.</p>
+      </div>
+      <div class="hiw-step fade-up d2">
+        <div class="hiw-num">
+          3
+          <div class="hiw-num-inner"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        </div>
+        <h3>Partner RTO Assessment</h3>
+        <p>Your application is submitted to a partner Registered Training Organisation (RTO) who conducts the formal assessment against national competency standards.</p>
+      </div>
+      <div class="hiw-step fade-up d3">
+        <div class="hiw-num">
+          4
+          <div class="hiw-num-inner"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        </div>
+        <h3>Qualification Outcome</h3>
+        <p>Upon successful assessment by the partner RTO, a nationally recognised qualification is issued. Your advisor will keep you informed throughout the process.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     EVIDENCE
+============================= -->
+<section class="evidence-section" id="evidence">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <div class="section-label">What You Need</div>
+      <h2 class="section-title">Evidence We May Accept</h2>
+      <p class="section-sub">RPL is evidence-based. The more documentation you can provide that demonstrates your skills and experience, the stronger your application. Here are some common types of evidence.</p>
+    </div>
+    <div class="evidence-grid">
+      <div class="ev-card fade-up">
+        <div class="ev-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <span>Resume</span>
+      </div>
+      <div class="ev-card fade-up d1">
+        <div class="ev-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <span>Payslips</span>
+      </div>
+      <div class="ev-card fade-up d2">
+        <div class="ev-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <span>Employment Letters</span>
+      </div>
+      <div class="ev-card fade-up d3">
+        <div class="ev-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <span>References</span>
+      </div>
+      <div class="ev-card fade-up">
+        <div class="ev-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <span>Work Samples</span>
+      </div>
+      <div class="ev-card fade-up d1">
+        <div class="ev-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+        <span>Photos</span>
+      </div>
+      <div class="ev-card fade-up d2">
+        <div class="ev-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <span>Videos</span>
+      </div>
+      <div class="ev-card fade-up d3">
+        <div class="ev-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+        <span>Licences</span>
+      </div>
+      <div class="ev-card fade-up">
+        <div class="ev-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <span>Previous Qualifications</span>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:2rem; font-size:0.875rem; color:var(--gray-500);">Your advisor will guide you on the specific evidence requirements for your qualification and industry.</p>
+  </div>
+</section>
+
+
+<!-- ============================
+     TESTIMONIALS
+============================= -->
+<section class="test-section" id="testimonials">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <div class="section-label">Client Outcomes</div>
+      <h2 class="section-title">What Our Clients Say</h2>
+      <p class="section-sub">Experienced workers across Australia have used RPL to gain formal recognition of the skills they worked hard to develop.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card fade-up">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-quote">"I had been working in security for over eight years and never had a formal qualification to show for it. The team at Pathlyn walked me through everything and made the process simple. I am glad I reached out."</p>
+        <div class="test-author">
+          <div class="test-avatar">S.K</div>
+          <div>
+            <div class="test-name">S.K.</div>
+            <div class="test-role">Security Operations — NSW</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card fade-up d1">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-quote">"After years working as a disability support worker, I finally have my Certificate III. The advisor was patient and guided me through the evidence collection step by step. Highly recommend to anyone in the care sector."</p>
+        <div class="test-author">
+          <div class="test-avatar">M.T</div>
+          <div>
+            <div class="test-name">M.T.</div>
+            <div class="test-role">Individual Support — QLD</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card fade-up d2">
+        <div class="test-stars">★★★★★</div>
+        <p class="test-quote">"I had no idea RPL was even an option for someone in construction. My advisor explained the whole thing clearly. The process was straightforward and I now have a qualification that reflects my actual experience on site."</p>
+        <div class="test-author">
+          <div class="test-avatar">P.L</div>
+          <div>
+            <div class="test-name">P.L.</div>
+            <div class="test-role">Construction — VIC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="test-placeholder-note">Client testimonials are representative of real client experiences. Names abbreviated for privacy.</p>
+  </div>
+</section>
+
+<!-- ============================
+     FAQ
+============================= -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-hd center fade-up">
+      <div class="section-label">Common Questions</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub">Everything you need to know about the RPL process, eligibility and how Pathlyn works.</p>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item fade-up">
+        <button class="faq-q" aria-expanded="false">
+          What is Recognition of Prior Learning (RPL)?
+          <div class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">RPL is a formal assessment process that recognises the skills, knowledge and experience you have gained through work, life and previous study — and assesses them against the requirements of a national qualification. If you meet the required competency standards, you may be awarded a qualification or specific units without completing full formal training.</div></div>
+      </div>
+      <div class="faq-item fade-up d1">
+        <button class="faq-q" aria-expanded="false">
+          How do I know if I am eligible for RPL?
+          <div class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">Eligibility varies depending on the qualification and the evidence you can provide. Generally, if you have been working in a relevant industry for at least 12 months, you may be a suitable candidate for RPL. The best way to find out is to complete a free eligibility check with one of our advisors, who will assess your background and advise on the most appropriate pathway.</div></div>
+      </div>
+      <div class="faq-item fade-up d2">
+        <button class="faq-q" aria-expanded="false">
+          What types of evidence do I need to provide?
+          <div class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">The types of evidence that may support your RPL application include your resume, payslips, employment letters, professional references, work samples, photographs, videos, licences, certificates and any previous training records. Your advisor will guide you on the specific evidence requirements for your qualification and help you identify what you already have.</div></div>
+      </div>
+      <div class="faq-item fade-up">
+        <button class="faq-q" aria-expanded="false">
+          How long does the RPL process take?
+          <div class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">Timeframes vary depending on the qualification, the evidence available and the partner RTO assessment process. In many cases the process can be completed within 4 to 12 weeks. Your advisor will provide a realistic estimate during your eligibility check based on your individual circumstances.</div></div>
+      </div>
+      <div class="faq-item fade-up d1">
+        <button class="faq-q" aria-expanded="false">
+          Is Pathlyn a Registered Training Organisation (RTO)?
+          <div class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">No. Pathlyn is not a Registered Training Organisation. We are a specialist RPL consultancy and technology platform. We work with a network of partner RTOs who conduct the formal assessment and issue nationally recognised qualifications on your behalf. Qualifications are issued by the partner RTO, not by Pathlyn.</div></div>
+      </div>
+      <div class="faq-item fade-up d2">
+        <button class="faq-q" aria-expanded="false">
+          Does RPL guarantee that I will receive a qualification?
+          <div class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">No. RPL is an assessment process and the outcome depends on the evidence you are able to provide and the assessment conducted by the partner RTO. Pathlyn does not offer guaranteed outcomes, issue qualifications directly, or use language such as "guaranteed qualification" or "instant certificate." We will always provide you with an honest assessment of your eligibility before you proceed.</div></div>
+      </div>
+      <div class="faq-item fade-up">
+        <button class="faq-q" aria-expanded="false">
+          How much does the RPL process cost?
+          <div class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">Fees vary depending on the qualification and the partner RTO involved. The eligibility check is always free. During your initial consultation, your advisor will provide a transparent breakdown of all costs before you commit to anything. There are no hidden fees or surprises.</div></div>
+      </div>
+      <div class="faq-item fade-up d1">
+        <button class="faq-q" aria-expanded="false">
+          Can I get RPL for any qualification?
+          <div class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-body"><div class="faq-body-inner">RPL is available for many nationally recognised qualifications across a wide range of industries. However, not every qualification or unit may be fully assessable through RPL. Some qualifications have mandatory practical components that must be completed through formal training. Our advisors will outline the most appropriate pathway based on your experience and the specific qualification you are pursuing.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     CONTACT / ELIGIBILITY FORM
+============================= -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-lhs fade-up">
+        <div class="section-label">Get Started</div>
+        <h2>Check Your Eligibility — It's Free</h2>
+        <p>Complete the form and one of our RPL advisors will be in touch to discuss your background, industry experience and the qualifications that may be available to you.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            1300 XXX XXX
+          </div>
+          <div class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            info@pathlyn.app
+          </div>
+          <div class="contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Australia Wide — All States &amp; Territories
+          </div>
+        </div>
+        <div class="contact-note">
+          <strong>Please note:</strong> Pathlyn is not an RTO and does not issue qualifications directly. We are a specialist RPL consultancy and technology platform working with a network of partner RTOs. The eligibility check is completely free and you are under no obligation to proceed.
+        </div>
+      </div>
+      <div class="fade-up d1">
+        <div class="form-card">
+          <div class="form-title">Free Eligibility Check</div>
+          <div class="form-subtitle">Fill in your details and we'll be in touch within one business day.</div>
+          <form id="eligForm" onsubmit="handleSubmit(event)" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fname">Full Name <span class="req">*</span></label>
+                <input class="form-ctrl" type="text" id="fname" name="fullName" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="mobile">Mobile <span class="req">*</span></label>
+                <input class="form-ctrl" type="tel" id="mobile" name="mobile" placeholder="04XX XXX XXX" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address <span class="req">*</span></label>
+                <input class="form-ctrl" type="email" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="state">State / Territory <span class="req">*</span></label>
+                <select class="form-ctrl" id="state" name="state" required>
+                  <option value="" disabled selected>Select state</option>
+                  <option>New South Wales</option>
+                  <option>Victoria</option>
+                  <option>Queensland</option>
+                  <option>Western Australia</option>
+                  <option>South Australia</option>
+                  <option>Tasmania</option>
+                  <option>Australian Capital Territory</option>
+                  <option>Northern Territory</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="industry">Industry <span class="req">*</span></label>
+                <select class="form-ctrl" id="industry" name="industry" required>
+                  <option value="" disabled selected>Select industry</option>
+                  <option>Security</option>
+                  <option>Health &amp; Community Services</option>
+                  <option>Hospitality &amp; Commercial Cookery</option>
+                  <option>Construction</option>
+                  <option>Business &amp; Leadership</option>
+                  <option>Information Technology</option>
+                  <option>Automotive</option>
+                  <option>Retail</option>
+                  <option>Beauty &amp; Hairdressing</option>
+                  <option>Education &amp; Training</option>
+                  <option>Finance &amp; Accounting</option>
+                  <option>Work Health &amp; Safety</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="occupation">Current Occupation <span class="req">*</span></label>
+                <input class="form-ctrl" type="text" id="occupation" name="occupation" placeholder="e.g. Support Worker, Carpenter" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Which best describes your situation? <span class="req">*</span></label>
+              <div class="radio-group">
+                <label class="radio-opt">
+                  <input type="radio" name="situation" value="experienced" required>
+                  I have relevant work experience
+                </label>
+                <label class="radio-opt">
+                  <input type="radio" name="situation" value="some">
+                  I have some experience but I'm unsure if it is enough
+                </label>
+                <label class="radio-opt">
+                  <input type="radio" name="situation" value="none">
+                  I don't currently have relevant work experience
+                </label>
+              </div>
+            </div>
+            <div class="form-group" id="yearsField" style="display:none">
+              <label class="form-label" for="experience">Years of Experience <span class="req">*</span></label>
+              <select class="form-ctrl" id="experience" name="experience">
+                <option value="" disabled selected>Select years</option>
+                <option>Less than 1 year</option>
+                <option>1–2 years</option>
+                <option>3–5 years</option>
+                <option>5–10 years</option>
+                <option>10+ years</option>
+              </select>
+            </div>
+            <div class="form-group" id="goalField" style="display:none">
+              <label class="form-label" for="goal">What are you hoping to achieve with this qualification? <span class="req">*</span></label>
+              <textarea class="form-ctrl" id="goal" name="goal" placeholder="Tell us about your goals and what you're looking to achieve..." style="min-height:80px"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="qualification">Qualification Interested In</label>
+              <input class="form-ctrl" type="text" id="qualification" name="qualification" placeholder="e.g. Certificate III in Individual Support">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Additional Information</label>
+              <textarea class="form-ctrl" id="message" name="message" placeholder="Tell us a bit about your background and what you're hoping to achieve..."></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Submit Free Eligibility Check
+              </button>
+            </div>
+            <p class="form-disc">By submitting this form you agree to our Privacy Policy. Pathlyn is not an RTO and does not issue qualifications directly. We connect clients with our partner RTO network for assessment.</p>
+          </form>
+          <div id="formSuccess" style="display:none; text-align:center; padding:2rem 1rem;">
+            <div style="width:56px;height:56px;background:rgba(13,148,136,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;color:var(--teal-600)">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 style="font-size:1.125rem;font-weight:700;color:var(--navy-800);margin-bottom:0.5rem">Enquiry Received</h3>
+            <p style="font-size:0.9rem;color:var(--gray-500);line-height:1.6">Thank you for reaching out. One of our RPL advisors will be in contact within one business day to discuss your eligibility.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FINAL CTA
+============================= -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner fade-up">
+      <h2>Ready to Check Your Eligibility?</h2>
+      <p>Your work experience has value. Find out if it qualifies you for a nationally recognised qualification — completely free, no obligation.</p>
+      <div class="cta-btns">
+        <a href="#contact" class="btn btn-white btn-lg">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          Free Eligibility Check
+        </a>
+        <a href="#how-it-works" class="btn btn-ghost btn-lg">Learn How RPL Works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FOOTER
+============================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark">P</div>
+          <div class="logo-text">
+            <span class="logo-name" style="color:white">Pathlyn</span>
+            <span class="logo-tagline">AI-Powered RPL</span>
+          </div>
+        </div>
+        <p>Australia's AI-powered RPL platform, helping experienced workers across all industries turn their skills into nationally recognised qualifications.</p>
+        <p style="margin-top:0.75rem; font-size:0.8rem;">Pathlyn is not a Registered Training Organisation. Qualifications are issued by our partner RTOs.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Quick Links</div>
+        <ul>
+          <li><a href="qualifications.html">Qualifications</a></li>
+          <li><a href="#why-us">Why Pathlyn</a></li>
+          <li><a href="#how-it-works">How RPL Works</a></li>
+          <li><a href="#evidence">Evidence Guide</a></li>
+          <li><a href="#industries">Industries</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Industries</div>
+        <ul>
+          <li><a href="qualifications.html?industry=security">Security</a></li>
+          <li><a href="qualifications.html?industry=health">Health &amp; Community</a></li>
+          <li><a href="qualifications.html?industry=hospitality">Hospitality &amp; Cookery</a></li>
+          <li><a href="qualifications.html?industry=construction">Construction</a></li>
+          <li><a href="qualifications.html?industry=business">Business &amp; Leadership</a></li>
+          <li><a href="qualifications.html?industry=whs">Work Health &amp; Safety</a></li>
+          <li><a href="qualifications.html">All Industries →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-col">
+          <div class="footer-ci">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>1300 XXX XXX</span>
+          </div>
+          <div class="footer-ci">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>info@pathlyn.app</span>
+          </div>
+          <div class="footer-ci">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>All States &amp; Territories, Australia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pathlyn. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+    <div class="footer-disc">
+      <p>Pathlyn is a specialist RPL consultancy and technology platform and is not a Registered Training Organisation (RTO). Pathlyn does not deliver training or issue qualifications. Assessment services and qualification issuance are provided by our network of partner RTOs registered under the Australian Skills Quality Authority (ASQA). Outcomes are subject to individual assessment and are not guaranteed. Nothing on this website should be construed as a guarantee of qualification or assessment outcome.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // Mobile menu
+  const hambBtn = document.getElementById('hambBtn');
+  const mobMenu = document.getElementById('mobMenu');
+  const mobClose = document.getElementById('mobClose');
+
+  hambBtn.addEventListener('click', () => {
+    mobMenu.classList.add('open');
+    hambBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  });
+
+  function closeMob() {
+    mobMenu.classList.remove('open');
+    hambBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  mobClose.addEventListener('click', closeMob);
+  mobMenu.addEventListener('click', (e) => { if (e.target === mobMenu) closeMob(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMob(); });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── CONDITIONAL LOGIC: situation radio ──
+  document.querySelectorAll('input[name="situation"]').forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      var yearsField = document.getElementById('yearsField');
+      var goalField  = document.getElementById('goalField');
+      if (this.value === 'experienced' || this.value === 'some') {
+        yearsField.style.display = '';
+        goalField.style.display  = 'none';
+      } else {
+        yearsField.style.display = 'none';
+        goalField.style.display  = '';
+      }
+    });
+  });
+
+  // ── PRE-FILL FROM URL PARAMS ──
+  // Reads ?ind=<key>&qual=<name> appended by qualification cards and industry entry points.
+  // To add pre-fill from a new source, append these params to the URL before navigating to #contact.
+  (function() {
+    var IND_MAP = {
+      security:    'Security',
+      health:      'Health & Community Services',
+      hospitality: 'Hospitality & Commercial Cookery',
+      construction:'Construction',
+      business:    'Business & Leadership',
+      it:          'Information Technology',
+      automotive:  'Automotive',
+      retail:      'Retail',
+      beauty:      'Beauty & Hairdressing',
+      education:   'Education & Training',
+      finance:     'Finance & Accounting',
+      whs:         'Work Health & Safety',
+    };
+    var params = new URLSearchParams(window.location.search);
+    var pInd  = params.get('ind');
+    var pQual = params.get('qual');
+    if (pInd && IND_MAP[pInd]) {
+      var sel = document.getElementById('industry');
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].text === IND_MAP[pInd]) { sel.selectedIndex = i; break; }
+      }
+    }
+    if (pQual) {
+      document.getElementById('qualification').value = decodeURIComponent(pQual);
+    }
+  })();
+
+  // ── FORM VALIDATION ──
+  function validateForm() {
+    var valid = true;
+    var firstErrEl = null;
+
+    function markError(fieldId, msg) {
+      var field = document.getElementById(fieldId);
+      var group = field.closest('.form-group');
+      group.classList.add('has-error');
+      var err = group.querySelector('.form-error');
+      if (!err) { err = document.createElement('span'); err.className = 'form-error'; group.appendChild(err); }
+      err.textContent = msg;
+      if (!firstErrEl) firstErrEl = group;
+      valid = false;
+    }
+
+    // Clear previous errors
+    document.querySelectorAll('.form-group.has-error').forEach(function(g) { g.classList.remove('has-error'); });
+    document.querySelectorAll('.form-error').forEach(function(e) { e.textContent = ''; });
+
+    if (!document.getElementById('fname').value.trim())
+      markError('fname', 'Please enter your full name.');
+
+    var mob = document.getElementById('mobile').value.trim();
+    if (!mob) {
+      markError('mobile', 'Please enter your mobile number.');
+    } else if (mob.replace(/[\s\-\(\)]/g,'').replace(/^\+/,'').length < 10) {
+      markError('mobile', 'Please enter a valid phone number (at least 10 digits).');
+    }
+
+    var emailVal = document.getElementById('email').value.trim();
+    if (!emailVal) {
+      markError('email', 'Please enter your email address.');
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailVal)) {
+      markError('email', 'Please enter a valid email address.');
+    }
+
+    if (!document.getElementById('state').value)
+      markError('state', 'Please select your state or territory.');
+    if (!document.getElementById('industry').value)
+      markError('industry', 'Please select your industry.');
+    if (!document.getElementById('occupation').value.trim())
+      markError('occupation', 'Please enter your current occupation.');
+
+    var checkedSit = document.querySelector('input[name="situation"]:checked');
+    if (!checkedSit) {
+      var sitGroup = document.querySelector('input[name="situation"]').closest('.form-group');
+      sitGroup.classList.add('has-error');
+      var sitErr = sitGroup.querySelector('.form-error');
+      if (!sitErr) { sitErr = document.createElement('span'); sitErr.className = 'form-error'; sitGroup.appendChild(sitErr); }
+      sitErr.textContent = 'Please select an option.';
+      if (!firstErrEl) firstErrEl = sitGroup;
+      valid = false;
+    } else if (checkedSit.value === 'experienced' || checkedSit.value === 'some') {
+      if (!document.getElementById('experience').value)
+        markError('experience', 'Please select your years of experience.');
+    } else if (checkedSit.value === 'none') {
+      if (!document.getElementById('goal').value.trim())
+        markError('goal', 'Please describe what you are hoping to achieve.');
+    }
+
+    if (firstErrEl) firstErrEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return valid;
+  }
+
+  // Clear field error as soon as the user interacts with it
+  (function() {
+    document.querySelectorAll('#eligForm .form-ctrl').forEach(function(el) {
+      ['input','change'].forEach(function(evt) {
+        el.addEventListener(evt, function() {
+          var g = this.closest('.form-group');
+          if (g) { g.classList.remove('has-error'); var e = g.querySelector('.form-error'); if (e) e.textContent = ''; }
+        });
+      });
+    });
+    document.querySelectorAll('input[name="situation"]').forEach(function(r) {
+      r.addEventListener('change', function() {
+        var g = this.closest('.form-group');
+        if (g) { g.classList.remove('has-error'); var e = g.querySelector('.form-error'); if (e) e.textContent = ''; }
+      });
+    });
+  })();
+
+  // ── FORM SUBMISSION ──
+  // Collects all fields into a structured object. Replace the console.log with a
+  // POST to your webhook / CRM API endpoint in Phase 2 (email automation build-out).
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!validateForm()) return;
+    var checkedSit = document.querySelector('input[name="situation"]:checked');
+    var formData = {
+      fullName:      document.getElementById('fname').value,
+      mobile:        document.getElementById('mobile').value,
+      email:         document.getElementById('email').value,
+      state:         document.getElementById('state').value,
+      industry:      document.getElementById('industry').value,
+      occupation:    document.getElementById('occupation').value,
+      situation:     checkedSit ? checkedSit.value : '',
+      experience:    document.getElementById('experience').value,
+      goal:          document.getElementById('goal').value,
+      qualification: document.getElementById('qualification').value,
+      message:       document.getElementById('message').value,
+      submittedAt:   new Date().toISOString(),
+      source:        new URLSearchParams(window.location.search).get('ind') || 'direct',
+    };
+    // TODO Phase 2: POST formData to webhook/API endpoint
+    // fetch('/api/enquiry', { method:'POST', body: JSON.stringify(formData) });
+    console.log('[Pathlyn] Eligibility check submitted:', formData);
+    document.getElementById('eligForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+</script>
+</body>
+</html>
