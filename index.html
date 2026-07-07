@@ -140,6 +140,9 @@
     .nav.scrolled { border-bottom-color: var(--gray-200); box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: 2rem; }
     .nav-logo { display: flex; align-items: center; gap: 0.625rem; flex-shrink: 0; }
+    .nav-logo-img { width: 40px; height: 40px; object-fit: contain; display: block; }
+    .nav-logo-word { font-size: 1.375rem; font-weight: 700; letter-spacing: -0.03em; color: var(--navy-800); line-height: 1; }
+    .nav-logo-word .accent { color: var(--teal-600); }
     .logo-mark {
       width: 38px; height: 38px;
       background: linear-gradient(135deg, var(--teal-600), var(--teal-500));
@@ -573,11 +576,8 @@
   <div class="container">
     <div class="nav-inner">
       <a href="#" class="nav-logo" aria-label="Pathlyn Home">
-        <div class="logo-mark">P</div>
-        <div class="logo-text">
-          <span class="logo-name">Pathlyn</span>
-          <span class="logo-tagline">AI-Powered RPL</span>
-        </div>
+        <img src="branding/logo-stacked.png" alt="" class="nav-logo-img">
+        <span class="nav-logo-word">Path<span class="accent">lyn</span></span>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="qualifications.html">Qualifications</a>
