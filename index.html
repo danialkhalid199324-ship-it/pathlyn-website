@@ -1469,11 +1469,11 @@
   })();
 
   // ── FORM SUBMISSION ──
-  // Collects all fields into a structured object. Replace the console.log with a
-  // POST to your webhook / CRM API endpoint in Phase 2 (email automation build-out).
   function handleSubmit(e) {
     e.preventDefault();
     if (!validateForm()) return;
+    var btn = document.querySelector('#eligForm button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Submitting…'; }
     var checkedSit = document.querySelector('input[name="situation"]:checked');
     var formData = {
       fullName:      document.getElementById('fname').value,
@@ -1490,11 +1490,25 @@
       submittedAt:   new Date().toISOString(),
       source:        new URLSearchParams(window.location.search).get('ind') || 'direct',
     };
-    // TODO Phase 2: POST formData to webhook/API endpoint
-    // fetch('/api/enquiry', { method:'POST', body: JSON.stringify(formData) });
-    console.log('[Pathlyn] Eligibility check submitted:', formData);
-    document.getElementById('eligForm').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+    fetch('https://app.pathlyn.com.au/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      if (data.ok) {
+        document.getElementById('eligForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        if (btn) { btn.disabled = false; btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Submit Free Eligibility Check'; }
+        alert(data.error || 'Something went wrong. Please try again.');
+      }
+    })
+    .catch(function() {
+      if (btn) { btn.disabled = false; btn.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Submit Free Eligibility Check'; }
+      alert('Something went wrong. Please check your connection and try again.');
+    });
   }
 </script>
 </body>
